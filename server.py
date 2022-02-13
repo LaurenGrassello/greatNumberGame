@@ -39,12 +39,6 @@ def guess():
     session['guess'] = int(request.form['guess'])
     session['randnum'] = int(session['randnum'])
     return redirect("/")
-
-
-@app.route('/destroy_session')
-def destroy():
-    session.clear()
-    return render_template('index.html')
         
 
 if __name__=="__main__":
