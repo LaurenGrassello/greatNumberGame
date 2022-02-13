@@ -27,11 +27,11 @@
             </form>
             {% if session['guess'] < session['randnum'] and session['guess'] != -1 %}
                 <div class="bg-warning m-2 lowbox col-md-2 mx-auto">
-                    <h1>Too Low!</h1>
+                    <p class="align text-center">Too low!</p>
                 </div>
             {% elif session['guess'] > session['randnum'] %}
                 <div class="bg-danger m-2 lowbox col-md-2 mx-auto">
-                    <h1>Too High!</h1>
+                    <p class="align text-center">Too High!</p>
                 </div>
             {% elif session['guess'] == session['randnum'] %}
                 <div class="bg-success m-2 p-2 lowbox col-md-2 mx-auto">
