@@ -25,10 +25,6 @@ def index():
             session['guess'] = -1
     return render_template("index.html")
 
-@app.route('/play_again')
-def play_again():
-    session.clear()
-    return redirect("/")
 
 @app.route('/guess', methods=['POST'])
 def guess():
@@ -38,6 +34,12 @@ def guess():
         session['user_attempt'] = 0
     session['guess'] = int(request.form['guess'])
     session['randnum'] = int(session['randnum'])
+    return redirect("/")
+
+
+@app.route('/play_again')
+def play_again():
+    session.clear()
     return redirect("/")
         
 
